@@ -16,150 +16,19 @@ public without sharing class SalesforceMetadataService {
         public String fullName;
     }
 
-    public class FieldSetTranslation {
-        public String label;
-        public String name;
-        private String[] label_type_info = new String[]{'label',SOAP_M_URI,null,'1','1','false'};
-        private String[] name_type_info = new String[]{'name',SOAP_M_URI,null,'1','1','false'};
-        private String[] apex_schema_type_info = new String[]{SOAP_M_URI,'true','false'};
-        private String[] field_order_type_info = new String[]{'label','name'};
-    }
-
-    public class QuickActionTranslation {
-        public String label;
-        public String name;
-        private String[] label_type_info = new String[]{'label',SOAP_M_URI,null,'1','1','false'};
-        private String[] name_type_info = new String[]{'name',SOAP_M_URI,null,'1','1','false'};
-        private String[] apex_schema_type_info = new String[]{SOAP_M_URI,'true','false'};
-        private String[] field_order_type_info = new String[]{'label','name'};
-    }
-
-    public class ReportTypeColumnTranslation {
-        public String label;
-        public String name;
-        private String[] label_type_info = new String[]{'label',SOAP_M_URI,null,'1','1','false'};
-        private String[] name_type_info = new String[]{'name',SOAP_M_URI,null,'1','1','false'};
-        private String[] apex_schema_type_info = new String[]{SOAP_M_URI,'true','false'};
-        private String[] field_order_type_info = new String[]{'label','name'};
-    }
-
-    public class ReportTypeTranslation {
-        public String description;
-        public String label;
-        public String name;
-        public SalesforceMetadataService.ReportTypeSectionTranslation[] sections;
-        private String[] description_type_info = new String[]{'description',SOAP_M_URI,null,'0','1','false'};
-        private String[] label_type_info = new String[]{'label',SOAP_M_URI,null,'0','1','false'};
-        private String[] name_type_info = new String[]{'name',SOAP_M_URI,null,'1','1','false'};
-        private String[] sections_type_info = new String[]{'sections',SOAP_M_URI,null,'0','-1','false'};
-        private String[] apex_schema_type_info = new String[]{SOAP_M_URI,'true','false'};
-        private String[] field_order_type_info = new String[]{'description','label','name','sections'};
-    }
-
-    public class ReportTypeSectionTranslation {
-        public SalesforceMetadataService.ReportTypeColumnTranslation[] columns;
-        public String label;
-        public String name;
-        private String[] columns_type_info = new String[]{'columns',SOAP_M_URI,null,'0','-1','false'};
-        private String[] label_type_info = new String[]{'label',SOAP_M_URI,null,'0','1','false'};
-        private String[] name_type_info = new String[]{'name',SOAP_M_URI,null,'1','1','false'};
-        private String[] apex_schema_type_info = new String[]{SOAP_M_URI,'true','false'};
-        private String[] field_order_type_info = new String[]{'columns','label','name'};
-    }
-
-    public class SharingReasonTranslation {
-        public String label;
-        public String name;
-        private String[] label_type_info = new String[]{'label',SOAP_M_URI,null,'1','1','false'};
-        private String[] name_type_info = new String[]{'name',SOAP_M_URI,null,'1','1','false'};
-        private String[] apex_schema_type_info = new String[]{SOAP_M_URI,'true','false'};
-        private String[] field_order_type_info = new String[]{'label','name'};
-    }
-
-    public class RecordTypeTranslation {
-        public String description;
-        public String label;
-        public String name;
-        private String[] description_type_info = new String[]{'description',SOAP_M_URI,null,'0','1','false'};
-        private String[] label_type_info = new String[]{'label',SOAP_M_URI,null,'1','1','false'};
-        private String[] name_type_info = new String[]{'name',SOAP_M_URI,null,'1','1','false'};
-        private String[] apex_schema_type_info = new String[]{SOAP_M_URI,'true','false'};
-        private String[] field_order_type_info = new String[]{'description','label','name'};
-    }
-
-    public class StandardFieldTranslation {
-        public String label;
-        public String name;
-        private String[] label_type_info = new String[]{'label',SOAP_M_URI,null,'0','1','false'};
-        private String[] name_type_info = new String[]{'name',SOAP_M_URI,null,'1','1','false'};
-        private String[] apex_schema_type_info = new String[]{SOAP_M_URI,'true','false'};
-        private String[] field_order_type_info = new String[]{'label','name'};
-    }
-
-    public class ValidationRuleTranslation {
-        public String errorMessage;
-        public String name;
-        private String[] errorMessage_type_info = new String[]{'errorMessage',SOAP_M_URI,null,'1','1','false'};
-        private String[] name_type_info = new String[]{'name',SOAP_M_URI,null,'1','1','false'};
-        private String[] apex_schema_type_info = new String[]{SOAP_M_URI,'true','false'};
-        private String[] field_order_type_info = new String[]{'errorMessage','name'};
-    }
-
-    public class WebLinkTranslation {
-        public String label;
-        public String name;
-        private String[] label_type_info = new String[]{'label',SOAP_M_URI,null,'1','1','false'};
-        private String[] name_type_info = new String[]{'name',SOAP_M_URI,null,'1','1','false'};
-        private String[] apex_schema_type_info = new String[]{SOAP_M_URI,'true','false'};
-        private String[] field_order_type_info = new String[]{'label','name'};
-    }
-
-    public class WorkflowTaskTranslation {
-        public String description;
-        public String name;
-        public String subject;
-        private String[] description_type_info = new String[]{'description',SOAP_M_URI,null,'0','1','false'};
-        private String[] name_type_info = new String[]{'name',SOAP_M_URI,null,'1','1','false'};
-        private String[] subject_type_info = new String[]{'subject',SOAP_M_URI,null,'0','1','false'};
-        private String[] apex_schema_type_info = new String[]{SOAP_M_URI,'true','false'};
-        private String[] field_order_type_info = new String[]{'description','name','subject'};
-    }
-
     public class CustomObjectTranslation extends Metadata {
         public String type = 'CustomObjectTranslation';
         public String fullName;
-        private String[] fullName_type_info = new String[]{'fullName',SOAP_M_URI,null,'0','1','false'};
         public SalesforceMetadataService.ObjectNameCaseValue[] caseValues;
-        public SalesforceMetadataService.FieldSetTranslation[] fieldSets;
         public SalesforceMetadataService.CustomFieldTranslation[] fields;
-        public String gender;
-        public SalesforceMetadataService.LayoutTranslation[] layouts;
         public String nameFieldLabel;
-        public SalesforceMetadataService.QuickActionTranslation[] quickActions;
-        public SalesforceMetadataService.RecordTypeTranslation[] recordTypes;
-        public SalesforceMetadataService.SharingReasonTranslation[] sharingReasons;
-        public SalesforceMetadataService.StandardFieldTranslation[] standardFields;
-        public String startsWith;
-        public SalesforceMetadataService.ValidationRuleTranslation[] validationRules;
-        public SalesforceMetadataService.WebLinkTranslation[] webLinks;
-        public SalesforceMetadataService.WorkflowTaskTranslation[] workflowTasks;
-        private String[] caseValues_type_info = new String[]{'caseValues',SOAP_M_URI,null,'0','-1','false'};
-        private String[] fieldSets_type_info = new String[]{'fieldSets',SOAP_M_URI,null,'0','-1','false'};
         private String[] fields_type_info = new String[]{'fields',SOAP_M_URI,null,'0','-1','false'};
-        private String[] gender_type_info = new String[]{'gender',SOAP_M_URI,null,'0','1','false'};
-        private String[] layouts_type_info = new String[]{'layouts',SOAP_M_URI,null,'0','-1','false'};
+        private String[] caseValues_type_info = new String[]{'caseValues',SOAP_M_URI,null,'0','-1','false'};
+        private String[] fullName_type_info = new String[]{'fullName',SOAP_M_URI,null,'0','1','false'};
         private String[] nameFieldLabel_type_info = new String[]{'nameFieldLabel',SOAP_M_URI,null,'0','1','false'};
-        private String[] quickActions_type_info = new String[]{'quickActions',SOAP_M_URI,null,'0','-1','false'};
-        private String[] recordTypes_type_info = new String[]{'recordTypes',SOAP_M_URI,null,'0','-1','false'};
-        private String[] sharingReasons_type_info = new String[]{'sharingReasons',SOAP_M_URI,null,'0','-1','false'};
-        private String[] standardFields_type_info = new String[]{'standardFields',SOAP_M_URI,null,'0','-1','false'};
-        private String[] startsWith_type_info = new String[]{'startsWith',SOAP_M_URI,null,'0','1','false'};
-        private String[] validationRules_type_info = new String[]{'validationRules',SOAP_M_URI,null,'0','-1','false'};
-        private String[] webLinks_type_info = new String[]{'webLinks',SOAP_M_URI,null,'0','-1','false'};
-        private String[] workflowTasks_type_info = new String[]{'workflowTasks',SOAP_M_URI,null,'0','-1','false'};
-        private String[] apex_schema_type_info = new String[]{SOAP_M_URI,'true','false'};
+        private String[] apex_schema_type_info = new String[]{SOAP_M_URI, 'true', 'false'};
         private String[] type_att_info = new String[]{'xsi:type'};
-        private String[] field_order_type_info = new String[]{'fullName', 'caseValues','fieldSets','fields','gender','layouts','nameFieldLabel','quickActions','recordTypes','sharingReasons','standardFields','startsWith','validationRules','webLinks','workflowTasks'};
+        private String[] field_order_type_info = new String[]{'fullName', 'fields', 'caseValues', 'nameFieldLabel'};
     }
 
     public class ObjectNameCaseValue {
@@ -178,17 +47,18 @@ public without sharing class SalesforceMetadataService {
     }
 
     public class CustomFieldTranslation {
-        public SalesforceMetadataService.ObjectNameCaseValue[] caseValues;
         public String name;
         public String label;
+        public String gender;
         public String relationshipLabel;
         public SalesforceMetadataService.PicklistValueTranslation[] picklistValues;
         private String[] name_type_info = new String[]{'name',SOAP_M_URI,null,'1','1','false'};
         private String[] label_type_info = new String[]{'label',SOAP_M_URI,null,'0','1','false'};
         private String[] picklistValues_type_info = new String[]{'picklistValues',SOAP_M_URI,null,'0','-1','false'};
+        private String[] gender_type_info = new String[]{'gender',SOAP_M_URI,null,'0','1','false'};
         private String[] relationshipLabel_type_info = new String[]{'relationshipLabel',SOAP_M_URI,null,'0','1','false'};
         private String[] apex_schema_type_info = new String[]{SOAP_M_URI,'true','false'};
-        private String[] field_order_type_info = new String[]{'name', 'label', 'picklistValues', 'relationshipLabel'};
+        private String[] field_order_type_info = new String[]{'name', 'label', 'picklistValues', 'relationshipLabel', 'gender'};
     }
 
     public class PicklistValueTranslation {
@@ -282,419 +152,248 @@ public without sharing class SalesforceMetadataService {
         private String[] field_order_type_info = new String[]{'records'};
     }
 
-    public class LayoutTranslation {
-        public String layout;
-        public String layoutType;
-        public SalesforceMetadataService.LayoutSectionTranslation[] sections;
-        private String[] layout_type_info = new String[]{'layout',SOAP_M_URI,null,'1','1','false'};
-        private String[] layoutType_type_info = new String[]{'layoutType',SOAP_M_URI,null,'0','1','false'};
-        private String[] sections_type_info = new String[]{'sections',SOAP_M_URI,null,'0','-1','false'};
-        private String[] apex_schema_type_info = new String[]{SOAP_M_URI,'true','false'};
-        private String[] field_order_type_info = new String[]{'layout','layoutType','sections'};
-    }
-
-    public class LayoutSectionTranslation {
+    public class CustomLabelTranslation {
         public String label;
-        public String section;
-        private String[] label_type_info = new String[]{'label',SOAP_M_URI,null,'1','1','false'};
-        private String[] section_type_info = new String[]{'section',SOAP_M_URI,null,'1','1','false'};
-        private String[] apex_schema_type_info = new String[]{SOAP_M_URI,'true','false'};
-        private String[] field_order_type_info = new String[]{'label','section'};
-    }
-
-    public class MiniLayout {
-        public String[] fields;
-        public SalesforceMetadataService.RelatedListItem[] relatedLists;
-        private String[] fields_type_info = new String[]{'fields',SOAP_M_URI,null,'0','-1','false'};
-        private String[] relatedLists_type_info = new String[]{'relatedLists',SOAP_M_URI,null,'0','-1','false'};
-        private String[] apex_schema_type_info = new String[]{SOAP_M_URI,'true','false'};
-        private String[] field_order_type_info = new String[]{'fields','relatedLists'};
-    }
-
-    public class QuickActionList {
-        public SalesforceMetadataService.QuickActionListItem[] quickActionListItems;
-        private String[] quickActionListItems_type_info = new String[]{'quickActionListItems',SOAP_M_URI,null,'0','-1','false'};
-        private String[] apex_schema_type_info = new String[]{SOAP_M_URI,'true','false'};
-        private String[] field_order_type_info = new String[]{'quickActionListItems'};
-    }
-
-    public class QuickActionListItem {
-        public String quickActionName;
-        private String[] quickActionName_type_info = new String[]{'quickActionName',SOAP_M_URI,null,'1','1','false'};
-        private String[] apex_schema_type_info = new String[]{SOAP_M_URI,'true','false'};
-        private String[] field_order_type_info = new String[]{'quickActionName'};
-    }
-
-    public class SummaryLayoutItem {
-        public String customLink;
-        public String field;
-        public Integer posX;
-        public Integer posY;
-        public Integer posZ;
-        private String[] customLink_type_info = new String[]{'customLink',SOAP_M_URI,null,'0','1','false'};
-        private String[] field_type_info = new String[]{'field',SOAP_M_URI,null,'0','1','false'};
-        private String[] posX_type_info = new String[]{'posX',SOAP_M_URI,null,'1','1','false'};
-        private String[] posY_type_info = new String[]{'posY',SOAP_M_URI,null,'0','1','false'};
-        private String[] posZ_type_info = new String[]{'posZ',SOAP_M_URI,null,'0','1','false'};
-        private String[] apex_schema_type_info = new String[]{SOAP_M_URI,'true','false'};
-        private String[] field_order_type_info = new String[]{'customLink','field','posX','posY','posZ'};
-    }
-
-    public class SummaryLayout {
-        public String masterLabel;
-        public Integer sizeX;
-        public Integer sizeY;
-        public Integer sizeZ;
-        public SalesforceMetadataService.SummaryLayoutItem[] summaryLayoutItems;
-        public String summaryLayoutStyle;
-        private String[] masterLabel_type_info = new String[]{'masterLabel',SOAP_M_URI,null,'1','1','false'};
-        private String[] sizeX_type_info = new String[]{'sizeX',SOAP_M_URI,null,'1','1','false'};
-        private String[] sizeY_type_info = new String[]{'sizeY',SOAP_M_URI,null,'0','1','false'};
-        private String[] sizeZ_type_info = new String[]{'sizeZ',SOAP_M_URI,null,'0','1','false'};
-        private String[] summaryLayoutItems_type_info = new String[]{'summaryLayoutItems',SOAP_M_URI,null,'0','-1','false'};
-        private String[] summaryLayoutStyle_type_info = new String[]{'summaryLayoutStyle',SOAP_M_URI,null,'1','1','false'};
-        private String[] apex_schema_type_info = new String[]{SOAP_M_URI,'true','false'};
-        private String[] field_order_type_info = new String[]{'masterLabel','sizeX','sizeY','sizeZ','summaryLayoutItems','summaryLayoutStyle'};
-    }
-
-    public class RelatedContentItem {
-        public SalesforceMetadataService.LayoutItem layoutItem;
-        private String[] layoutItem_type_info = new String[]{'layoutItem',SOAP_M_URI,null,'1','1','false'};
-        private String[] apex_schema_type_info = new String[]{SOAP_M_URI,'true','false'};
-        private String[] field_order_type_info = new String[]{'layoutItem'};
-    }
-
-    public class Layout extends Metadata {
-        public String type = 'Layout';
-        public String fullName;
-        private String[] fullName_type_info = new String[]{'fullName',SOAP_M_URI,null,'0','1','false'};
-        public String[] customButtons;
-        public SalesforceMetadataService.CustomConsoleComponents customConsoleComponents;
-        public Boolean emailDefault;
-        public String[] excludeButtons;
-        public SalesforceMetadataService.FeedLayout feedLayout;
-        public String[] headers;
-        public SalesforceMetadataService.LayoutSection[] layoutSections;
-        public SalesforceMetadataService.MiniLayout miniLayout;
-        public String[] multilineLayoutFields;
-        public SalesforceMetadataService.PlatformActionList platformActionList;
-        public SalesforceMetadataService.QuickActionList quickActionList;
-        public SalesforceMetadataService.RelatedContent relatedContent;
-        public SalesforceMetadataService.RelatedListItem[] relatedLists;
-        public String[] relatedObjects;
-        public Boolean runAssignmentRulesDefault;
-        public Boolean showEmailCheckbox;
-        public Boolean showHighlightsPanel;
-        public Boolean showInteractionLogPanel;
-        public Boolean showKnowledgeComponent;
-        public Boolean showRunAssignmentRulesCheckbox;
-        public Boolean showSolutionSection;
-        public Boolean showSubmitAndAttachButton;
-        public SalesforceMetadataService.SummaryLayout summaryLayout;
-        private String[] customButtons_type_info = new String[]{'customButtons',SOAP_M_URI,null,'0','-1','false'};
-        private String[] customConsoleComponents_type_info = new String[]{'customConsoleComponents',SOAP_M_URI,null,'0','1','false'};
-        private String[] emailDefault_type_info = new String[]{'emailDefault',SOAP_M_URI,null,'0','1','false'};
-        private String[] excludeButtons_type_info = new String[]{'excludeButtons',SOAP_M_URI,null,'0','-1','false'};
-        private String[] feedLayout_type_info = new String[]{'feedLayout',SOAP_M_URI,null,'0','1','false'};
-        private String[] headers_type_info = new String[]{'headers',SOAP_M_URI,null,'0','-1','false'};
-        private String[] layoutSections_type_info = new String[]{'layoutSections',SOAP_M_URI,null,'0','-1','false'};
-        private String[] miniLayout_type_info = new String[]{'miniLayout',SOAP_M_URI,null,'0','1','false'};
-        private String[] multilineLayoutFields_type_info = new String[]{'multilineLayoutFields',SOAP_M_URI,null,'0','-1','false'};
-        private String[] platformActionList_type_info = new String[]{'platformActionList',SOAP_M_URI,null,'0','1','false'};
-        private String[] quickActionList_type_info = new String[]{'quickActionList',SOAP_M_URI,null,'0','1','false'};
-        private String[] relatedContent_type_info = new String[]{'relatedContent',SOAP_M_URI,null,'0','1','false'};
-        private String[] relatedLists_type_info = new String[]{'relatedLists',SOAP_M_URI,null,'0','-1','false'};
-        private String[] relatedObjects_type_info = new String[]{'relatedObjects',SOAP_M_URI,null,'0','-1','false'};
-        private String[] runAssignmentRulesDefault_type_info = new String[]{'runAssignmentRulesDefault',SOAP_M_URI,null,'0','1','false'};
-        private String[] showEmailCheckbox_type_info = new String[]{'showEmailCheckbox',SOAP_M_URI,null,'0','1','false'};
-        private String[] showHighlightsPanel_type_info = new String[]{'showHighlightsPanel',SOAP_M_URI,null,'0','1','false'};
-        private String[] showInteractionLogPanel_type_info = new String[]{'showInteractionLogPanel',SOAP_M_URI,null,'0','1','false'};
-        private String[] showKnowledgeComponent_type_info = new String[]{'showKnowledgeComponent',SOAP_M_URI,null,'0','1','false'};
-        private String[] showRunAssignmentRulesCheckbox_type_info = new String[]{'showRunAssignmentRulesCheckbox',SOAP_M_URI,null,'0','1','false'};
-        private String[] showSolutionSection_type_info = new String[]{'showSolutionSection',SOAP_M_URI,null,'0','1','false'};
-        private String[] showSubmitAndAttachButton_type_info = new String[]{'showSubmitAndAttachButton',SOAP_M_URI,null,'0','1','false'};
-        private String[] summaryLayout_type_info = new String[]{'summaryLayout',SOAP_M_URI,null,'0','1','false'};
-        private String[] apex_schema_type_info = new String[]{SOAP_M_URI,'true','false'};
-        private String[] type_att_info = new String[]{'xsi:type'};
-        private String[] field_order_type_info = new String[]{'fullName', 'customButtons','customConsoleComponents','emailDefault','excludeButtons','feedLayout','headers','layoutSections','miniLayout','multilineLayoutFields','platformActionList','quickActionList','relatedContent','relatedLists','relatedObjects','runAssignmentRulesDefault','showEmailCheckbox','showHighlightsPanel','showInteractionLogPanel','showKnowledgeComponent','showRunAssignmentRulesCheckbox','showSolutionSection','showSubmitAndAttachButton','summaryLayout'};
-    }
-
-    public class RelatedContent {
-        public SalesforceMetadataService.RelatedContentItem[] relatedContentItems;
-        private String[] relatedContentItems_type_info = new String[]{'relatedContentItems',SOAP_M_URI,null,'0','-1','false'};
-        private String[] apex_schema_type_info = new String[]{SOAP_M_URI,'true','false'};
-        private String[] field_order_type_info = new String[]{'relatedContentItems'};
-    }
-
-    public class PlatformActionList {
-        public String actionListContext;
-        public SalesforceMetadataService.PlatformActionListItem[] platformActionListItems;
-        public String relatedSourceEntity;
-        private String[] actionListContext_type_info = new String[]{'actionListContext',SOAP_M_URI,null,'1','1','false'};
-        private String[] platformActionListItems_type_info = new String[]{'platformActionListItems',SOAP_M_URI,null,'0','-1','false'};
-        private String[] relatedSourceEntity_type_info = new String[]{'relatedSourceEntity',SOAP_M_URI,null,'0','1','false'};
-        private String[] apex_schema_type_info = new String[]{SOAP_M_URI,'true','false'};
-        private String[] field_order_type_info = new String[]{'actionListContext','platformActionListItems','relatedSourceEntity'};
-    }
-
-    public class PlatformActionListItem {
-        public String actionName;
-        public String actionType;
-        public Integer sortOrder;
-        public String subtype;
-        private String[] actionName_type_info = new String[]{'actionName',SOAP_M_URI,null,'1','1','false'};
-        private String[] actionType_type_info = new String[]{'actionType',SOAP_M_URI,null,'1','1','false'};
-        private String[] sortOrder_type_info = new String[]{'sortOrder',SOAP_M_URI,null,'1','1','false'};
-        private String[] subtype_type_info = new String[]{'subtype',SOAP_M_URI,null,'0','1','false'};
-        private String[] apex_schema_type_info = new String[]{SOAP_M_URI,'true','false'};
-        private String[] field_order_type_info = new String[]{'actionName','actionType','sortOrder','subtype'};
-    }
-
-    public class FeedLayout {
-        public Boolean autocollapsePublisher;
-        public Boolean compactFeed;
-        public String feedFilterPosition;
-        public SalesforceMetadataService.FeedLayoutFilter[] feedFilters;
-        public Boolean fullWidthFeed;
-        public Boolean hideSidebar;
-        public Boolean highlightExternalFeedItems;
-        public SalesforceMetadataService.FeedLayoutComponent[] leftComponents;
-        public SalesforceMetadataService.FeedLayoutComponent[] rightComponents;
-        public Boolean useInlineFiltersInConsole;
-        private String[] autocollapsePublisher_type_info = new String[]{'autocollapsePublisher',SOAP_M_URI,null,'0','1','false'};
-        private String[] compactFeed_type_info = new String[]{'compactFeed',SOAP_M_URI,null,'0','1','false'};
-        private String[] feedFilterPosition_type_info = new String[]{'feedFilterPosition',SOAP_M_URI,null,'0','1','false'};
-        private String[] feedFilters_type_info = new String[]{'feedFilters',SOAP_M_URI,null,'0','-1','false'};
-        private String[] fullWidthFeed_type_info = new String[]{'fullWidthFeed',SOAP_M_URI,null,'0','1','false'};
-        private String[] hideSidebar_type_info = new String[]{'hideSidebar',SOAP_M_URI,null,'0','1','false'};
-        private String[] highlightExternalFeedItems_type_info = new String[]{'highlightExternalFeedItems',SOAP_M_URI,null,'0','1','false'};
-        private String[] leftComponents_type_info = new String[]{'leftComponents',SOAP_M_URI,null,'0','-1','false'};
-        private String[] rightComponents_type_info = new String[]{'rightComponents',SOAP_M_URI,null,'0','-1','false'};
-        private String[] useInlineFiltersInConsole_type_info = new String[]{'useInlineFiltersInConsole',SOAP_M_URI,null,'0','1','false'};
-        private String[] apex_schema_type_info = new String[]{SOAP_M_URI,'true','false'};
-        private String[] field_order_type_info = new String[]{'autocollapsePublisher','compactFeed','feedFilterPosition','feedFilters','fullWidthFeed','hideSidebar','highlightExternalFeedItems','leftComponents','rightComponents','useInlineFiltersInConsole'};
-    }
-
-    public class FeedLayoutFilter {
-        public String feedFilterName;
-        public String feedFilterType;
-        public String feedItemType;
-        private String[] feedFilterName_type_info = new String[]{'feedFilterName',SOAP_M_URI,null,'0','1','false'};
-        private String[] feedFilterType_type_info = new String[]{'feedFilterType',SOAP_M_URI,null,'1','1','false'};
-        private String[] feedItemType_type_info = new String[]{'feedItemType',SOAP_M_URI,null,'0','1','false'};
-        private String[] apex_schema_type_info = new String[]{SOAP_M_URI,'true','false'};
-        private String[] field_order_type_info = new String[]{'feedFilterName','feedFilterType','feedItemType'};
-    }
-
-    public class FeedLayoutComponent {
-        public String componentType;
-        public Integer height;
-        public String page_x;
-        private String[] componentType_type_info = new String[]{'componentType',SOAP_M_URI,null,'1','1','false'};
-        private String[] height_type_info = new String[]{'height',SOAP_M_URI,null,'0','1','false'};
-        private String[] page_x_type_info = new String[]{'page',SOAP_M_URI,null,'0','1','false'};
-        private String[] apex_schema_type_info = new String[]{SOAP_M_URI,'true','false'};
-        private String[] field_order_type_info = new String[]{'componentType','height','page_x'};
-    }
-
-    public class CustomConsoleComponents {
-        public SalesforceMetadataService.PrimaryTabComponents primaryTabComponents;
-        public SalesforceMetadataService.SubtabComponents subtabComponents;
-        private String[] primaryTabComponents_type_info = new String[]{'primaryTabComponents',SOAP_M_URI,null,'0','1','false'};
-        private String[] subtabComponents_type_info = new String[]{'subtabComponents',SOAP_M_URI,null,'0','1','false'};
-        private String[] apex_schema_type_info = new String[]{SOAP_M_URI,'true','false'};
-        private String[] field_order_type_info = new String[]{'primaryTabComponents','subtabComponents'};
-    }
-
-    public class SubtabComponents {
-        public SalesforceMetadataService.Container[] containers;
-        private String[] containers_type_info = new String[]{'containers',SOAP_M_URI,null,'0','-1','false'};
-        private String[] apex_schema_type_info = new String[]{SOAP_M_URI,'true','false'};
-        private String[] field_order_type_info = new String[]{'containers'};
-    }
-
-    public class PrimaryTabComponents {
-        public SalesforceMetadataService.Container[] containers;
-        private String[] containers_type_info = new String[]{'containers',SOAP_M_URI,null,'0','-1','false'};
-        private String[] apex_schema_type_info = new String[]{SOAP_M_URI,'true','false'};
-        private String[] field_order_type_info = new String[]{'containers'};
-    }
-
-    public class Container {
-        public Integer height;
-        public Boolean isContainerAutoSizeEnabled;
-        public String region;
-        public SalesforceMetadataService.SidebarComponent[] sidebarComponents;
-        public String style;
-        public String unit;
-        public Integer width;
-        private String[] height_type_info = new String[]{'height',SOAP_M_URI,null,'0','1','false'};
-        private String[] isContainerAutoSizeEnabled_type_info = new String[]{'isContainerAutoSizeEnabled',SOAP_M_URI,null,'1','1','false'};
-        private String[] region_type_info = new String[]{'region',SOAP_M_URI,null,'1','1','false'};
-        private String[] sidebarComponents_type_info = new String[]{'sidebarComponents',SOAP_M_URI,null,'0','-1','false'};
-        private String[] style_type_info = new String[]{'style',SOAP_M_URI,null,'1','1','false'};
-        private String[] unit_type_info = new String[]{'unit',SOAP_M_URI,null,'1','1','false'};
-        private String[] width_type_info = new String[]{'width',SOAP_M_URI,null,'0','1','false'};
-        private String[] apex_schema_type_info = new String[]{SOAP_M_URI,'true','false'};
-        private String[] field_order_type_info = new String[]{'height','isContainerAutoSizeEnabled','region','sidebarComponents','style','unit','width'};
-    }
-
-    public class RelatedList {
-        public Boolean hideOnDetail;
         public String name;
-        private String[] hideOnDetail_type_info = new String[]{'hideOnDetail',SOAP_M_URI,null,'1','1','false'};
+        private String[] label_type_info = new String[]{'label',SOAP_M_URI,null,'1','1','false'};
         private String[] name_type_info = new String[]{'name',SOAP_M_URI,null,'1','1','false'};
         private String[] apex_schema_type_info = new String[]{SOAP_M_URI,'true','false'};
-        private String[] field_order_type_info = new String[]{'hideOnDetail','name'};
+        private String[] field_order_type_info = new String[]{'label', 'name'};
     }
 
-    public class SidebarComponent {
-        public String componentType;
-        public String createAction;
-        public Boolean enableLinking;
-        public Integer height;
-        public String label;
-        public String lookup;
-        public String page_x;
-        public SalesforceMetadataService.RelatedList[] relatedLists;
-        public String unit;
-        public String updateAction;
-        public Integer width;
-        private String[] componentType_type_info = new String[]{'componentType',SOAP_M_URI,null,'1','1','false'};
-        private String[] createAction_type_info = new String[]{'createAction',SOAP_M_URI,null,'0','1','false'};
-        private String[] enableLinking_type_info = new String[]{'enableLinking',SOAP_M_URI,null,'0','1','false'};
-        private String[] height_type_info = new String[]{'height',SOAP_M_URI,null,'0','1','false'};
-        private String[] label_type_info = new String[]{'label',SOAP_M_URI,null,'0','1','false'};
-        private String[] lookup_type_info = new String[]{'lookup',SOAP_M_URI,null,'0','1','false'};
-        private String[] page_x_type_info = new String[]{'page',SOAP_M_URI,null,'0','1','false'};
-        private String[] relatedLists_type_info = new String[]{'relatedLists',SOAP_M_URI,null,'0','-1','false'};
-        private String[] unit_type_info = new String[]{'unit',SOAP_M_URI,null,'0','1','false'};
-        private String[] updateAction_type_info = new String[]{'updateAction',SOAP_M_URI,null,'0','1','false'};
-        private String[] width_type_info = new String[]{'width',SOAP_M_URI,null,'0','1','false'};
+    public class Translations extends Metadata {
+        public String type = 'Translations';
+        public String fullName;
+        public SalesforceMetadataService.CustomLabelTranslation[] customLabels;
+        public SalesforceMetadataService.CustomApplicationTranslation[] customApplications;
+        public SalesforceMetadataService.CustomTabTranslation[] customTabs;
+        public SalesforceMetadataService.FlowDefinitionTranslation[] flowDefinitions;
+        public SalesforceMetadataService.GlobalQuickActionTranslation[] quickActions;
+        public SalesforceMetadataService.ReportTypeTranslation[] reportTypes;
+        public SalesforceMetadataService.FlowTextTemplate[] textTemplates;
+        private String[] customLabels_type_info = new String[]{'customLabels',SOAP_M_URI,null,'0','-1','false'};
+        private String[] customApplications_type_info = new String[]{'customApplications',SOAP_M_URI,null,'0','-1','false'};
+		private String[] fullName_type_info = new String[]{'fullName',SOAP_M_URI,null,'0','1','false'};
+        private String[] customTabs_type_info = new String[]{'customTabs',SOAP_M_URI,null,'0','-1','false'};
+        private String[] flowDefinitions_type_info = new String[]{'flowDefinitions',SOAP_M_URI,null,'0','-1','false'};
+        private String[] quickActions_type_info = new String[]{'quickActions',SOAP_M_URI,null,'0','-1','false'};
+        private String[] reportTypes_type_info = new String[]{'reportTypes',SOAP_M_URI,null,'0','-1','false'};
+        private String[] textTemplates_type_info = new String[]{'textTemplates',SOAP_M_URI,null,'0','-1','false'};
         private String[] apex_schema_type_info = new String[]{SOAP_M_URI,'true','false'};
-        private String[] field_order_type_info = new String[]{'componentType','createAction','enableLinking','height','label','lookup','page_x','relatedLists','unit','updateAction','width'};
+        private String[] type_att_info = new String[]{'xsi:type'};
+        private String[] field_order_type_info = new String[]{
+            'fullName',
+            'customLabels',
+            'customApplications',
+            'customTabs',
+            'flowDefinitions',
+            'quickActions_type_info',
+            'reportTypes_type_info',
+            'textTemplates'
+       };
     }
 
-    public class RelatedListItem {
-        public String[] customButtons;
-        public String[] excludeButtons;
-        public String[] fields;
-        public String relatedList;
-        public String sortField;
-        public String sortOrder;
-        private String[] customButtons_type_info = new String[]{'customButtons',SOAP_M_URI,null,'0','-1','false'};
-        private String[] excludeButtons_type_info = new String[]{'excludeButtons',SOAP_M_URI,null,'0','-1','false'};
+    public class FlowMetadataValue {
+        public String name;
+        public SalesforceMetadataService.FlowElementReferenceOrValue value;
+        private String[] name_type_info = new String[]{'name',SOAP_M_URI,null,'1','1','false'};
+        private String[] value_type_info = new String[]{'value',SOAP_M_URI,null,'0','1','false'};
+        private String[] apex_schema_type_info = new String[]{SOAP_M_URI,'true','false'};
+        private String[] field_order_type_info = new String[]{'name','value'};
+    }
+
+    public virtual class FlowElement extends FlowBaseElement {
+        public String description;
+        public String name;
+    }
+
+    public virtual class FlowBaseElement {
+        public SalesforceMetadataService.FlowMetadataValue[] processMetadataValues;
+    }
+
+    public class FlowElementReferenceOrValue {
+        public Boolean booleanValue;
+        public DateTime dateTimeValue;
+        public Date dateValue;
+        public String elementReference;
+        public Double numberValue;
+        public String stringValue;
+        private String[] booleanValue_type_info = new String[]{'booleanValue',SOAP_M_URI,null,'0','1','true'};
+        private String[] dateTimeValue_type_info = new String[]{'dateTimeValue',SOAP_M_URI,null,'0','1','false'};
+        private String[] dateValue_type_info = new String[]{'dateValue',SOAP_M_URI,null,'0','1','false'};
+        private String[] elementReference_type_info = new String[]{'elementReference',SOAP_M_URI,null,'0','1','false'};
+        private String[] numberValue_type_info = new String[]{'numberValue',SOAP_M_URI,null,'0','1','true'};
+        private String[] stringValue_type_info = new String[]{'stringValue',SOAP_M_URI,null,'0','1','false'};
+        private String[] apex_schema_type_info = new String[]{SOAP_M_URI,'true','false'};
+        private String[] field_order_type_info = new String[]{'booleanValue','dateTimeValue','dateValue','elementReference','numberValue','stringValue'};
+    }
+
+    public class FlowTextTemplate extends FlowElement {
+        public String type = 'FlowTextTemplate';
+        public SalesforceMetadataService.FlowMetadataValue[] processMetadataValues;
+        private String[] processMetadataValues_type_info = new String[]{'processMetadataValues',SOAP_M_URI,null,'0','-1','false'};
+        public String description;
+        public String name;
+        private String[] description_type_info = new String[]{'description',SOAP_M_URI,null,'0','1','false'};
+        private String[] name_type_info = new String[]{'name',SOAP_M_URI,null,'1','1','false'};
+        public String text;
+        private String[] text_type_info = new String[]{'text',SOAP_M_URI,null,'1','1','false'};
+        private String[] apex_schema_type_info = new String[]{SOAP_M_URI,'true','false'};
+        private String[] type_att_info = new String[]{'xsi:type'};
+        private String[] field_order_type_info = new String[]{'processMetadataValues','description','name', 'text'};
+    }
+
+    public class ReportTypeTranslation {
+        public String description;
+        public String label;
+        public String name;
+        public SalesforceMetadataService.ReportTypeSectionTranslation[] sections;
+        private String[] description_type_info = new String[]{'description',SOAP_M_URI,null,'0','1','false'};
+        private String[] label_type_info = new String[]{'label',SOAP_M_URI,null,'0','1','false'};
+        private String[] name_type_info = new String[]{'name',SOAP_M_URI,null,'1','1','false'};
+        private String[] sections_type_info = new String[]{'sections',SOAP_M_URI,null,'0','-1','false'};
+        private String[] apex_schema_type_info = new String[]{SOAP_M_URI,'true','false'};
+        private String[] field_order_type_info = new String[]{'description','label','name','sections'};
+    }
+
+    public class ReportTypeSectionTranslation {
+        public SalesforceMetadataService.ReportTypeColumnTranslation[] columns;
+        public String label;
+        public String name;
+        private String[] columns_type_info = new String[]{'columns',SOAP_M_URI,null,'0','-1','false'};
+        private String[] label_type_info = new String[]{'label',SOAP_M_URI,null,'0','1','false'};
+        private String[] name_type_info = new String[]{'name',SOAP_M_URI,null,'1','1','false'};
+        private String[] apex_schema_type_info = new String[]{SOAP_M_URI,'true','false'};
+        private String[] field_order_type_info = new String[]{'columns','label','name'};
+    }
+
+    public class ReportTypeColumnTranslation {
+        public String label;
+        public String name;
+        private String[] label_type_info = new String[]{'label',SOAP_M_URI,null,'1','1','false'};
+        private String[] name_type_info = new String[]{'name',SOAP_M_URI,null,'1','1','false'};
+        private String[] apex_schema_type_info = new String[]{SOAP_M_URI,'true','false'};
+        private String[] field_order_type_info = new String[]{'label','name'};
+    }
+
+    public class GlobalQuickActionTranslation {
+        public String label;
+        public String name;
+        private String[] label_type_info = new String[]{'label',SOAP_M_URI,null,'1','1','false'};
+        private String[] name_type_info = new String[]{'name',SOAP_M_URI,null,'1','1','false'};
+        private String[] apex_schema_type_info = new String[]{SOAP_M_URI,'true','false'};
+        private String[] field_order_type_info = new String[]{'label','name'};
+    }
+
+    public class FlowDefinitionTranslation {
+        public SalesforceMetadataService.FlowTranslation[] flows;
+        public String fullName;
+        public String label;
+        private String[] flows_type_info = new String[]{'flows',SOAP_M_URI,null,'0','-1','false'};
+        private String[] fullName_type_info = new String[]{'fullName',SOAP_M_URI,null,'1','1','false'};
+        private String[] label_type_info = new String[]{'label',SOAP_M_URI,null,'0','1','false'};
+        private String[] apex_schema_type_info = new String[]{SOAP_M_URI,'true','false'};
+        private String[] field_order_type_info = new String[]{'flows','fullName','label'};
+    }
+
+    public class FlowTranslation {
+        public SalesforceMetadataService.FlowChoiceTranslation[] choices;
+        public String fullName;
+        public String label;
+        public SalesforceMetadataService.FlowScreenTranslation[] screens;
+        private String[] choices_type_info = new String[]{'choices',SOAP_M_URI,null,'0','-1','false'};
+        private String[] fullName_type_info = new String[]{'fullName',SOAP_M_URI,null,'1','1','false'};
+        private String[] label_type_info = new String[]{'label',SOAP_M_URI,null,'0','1','false'};
+        private String[] screens_type_info = new String[]{'screens',SOAP_M_URI,null,'0','-1','false'};
+        private String[] apex_schema_type_info = new String[]{SOAP_M_URI,'true','false'};
+        private String[] field_order_type_info = new String[]{'choices','fullName','label','screens'};
+    }
+
+    public class FlowScreenTranslation {
+        public SalesforceMetadataService.FlowScreenFieldTranslation[] fields;
+        public String helpText;
+        public String name;
+        public String pausedText;
         private String[] fields_type_info = new String[]{'fields',SOAP_M_URI,null,'0','-1','false'};
-        private String[] relatedList_type_info = new String[]{'relatedList',SOAP_M_URI,null,'1','1','false'};
-        private String[] sortField_type_info = new String[]{'sortField',SOAP_M_URI,null,'0','1','false'};
-        private String[] sortOrder_type_info = new String[]{'sortOrder',SOAP_M_URI,null,'0','1','false'};
+        private String[] helpText_type_info = new String[]{'helpText',SOAP_M_URI,null,'0','1','false'};
+        private String[] name_type_info = new String[]{'name',SOAP_M_URI,null,'1','1','false'};
+        private String[] pausedText_type_info = new String[]{'pausedText',SOAP_M_URI,null,'0','1','false'};
         private String[] apex_schema_type_info = new String[]{SOAP_M_URI,'true','false'};
-        private String[] field_order_type_info = new String[]{'customButtons','excludeButtons','fields','relatedList','sortField','sortOrder'};
+        private String[] field_order_type_info = new String[]{'fields','helpText','name','pausedText'};
     }
 
-    public class LayoutSection {
-        public Boolean customLabel;
-        public Boolean detailHeading;
-        public Boolean editHeading;
+    public class FlowScreenFieldTranslation {
+        public String fieldText;
+        public String helpText;
+        public String name;
+        public SalesforceMetadataService.FlowInputValidationRuleTranslation validationRule;
+        private String[] fieldText_type_info = new String[]{'fieldText',SOAP_M_URI,null,'0','1','false'};
+        private String[] helpText_type_info = new String[]{'helpText',SOAP_M_URI,null,'0','1','false'};
+        private String[] name_type_info = new String[]{'name',SOAP_M_URI,null,'1','1','false'};
+        private String[] validationRule_type_info = new String[]{'validationRule',SOAP_M_URI,null,'0','1','false'};
+        private String[] apex_schema_type_info = new String[]{SOAP_M_URI,'true','false'};
+        private String[] field_order_type_info = new String[]{'fieldText','helpText','name','validationRule'};
+    }
+
+    public class FlowChoiceTranslation {
+        public String choiceText;
+        public String name;
+        public SalesforceMetadataService.FlowChoiceUserInputTranslation userInput;
+        private String[] choiceText_type_info = new String[]{'choiceText',SOAP_M_URI,null,'0','1','false'};
+        private String[] name_type_info = new String[]{'name',SOAP_M_URI,null,'1','1','false'};
+        private String[] userInput_type_info = new String[]{'userInput',SOAP_M_URI,null,'0','1','false'};
+        private String[] apex_schema_type_info = new String[]{SOAP_M_URI,'true','false'};
+        private String[] field_order_type_info = new String[]{'choiceText','name','userInput'};
+    }
+
+    public class FlowChoiceUserInputTranslation {
+        public String promptText;
+        public SalesforceMetadataService.FlowInputValidationRuleTranslation validationRule;
+        private String[] promptText_type_info = new String[]{'promptText',SOAP_M_URI,null,'0','1','false'};
+        private String[] validationRule_type_info = new String[]{'validationRule',SOAP_M_URI,null,'0','1','false'};
+        private String[] apex_schema_type_info = new String[]{SOAP_M_URI,'true','false'};
+        private String[] field_order_type_info = new String[]{'promptText','validationRule'};
+    }
+
+    public class FlowInputValidationRuleTranslation {
+        public String errorMessage;
+        private String[] errorMessage_type_info = new String[]{'errorMessage',SOAP_M_URI,null,'0','1','false'};
+        private String[] apex_schema_type_info = new String[]{SOAP_M_URI,'true','false'};
+        private String[] field_order_type_info = new String[]{'errorMessage'};
+    }
+
+    public class CustomTabTranslation {
         public String label;
-        public SalesforceMetadataService.LayoutColumn[] layoutColumns;
-        public String style;
-        private String[] customLabel_type_info = new String[]{'customLabel',SOAP_M_URI,null,'0','1','false'};
-        private String[] detailHeading_type_info = new String[]{'detailHeading',SOAP_M_URI,null,'0','1','false'};
-        private String[] editHeading_type_info = new String[]{'editHeading',SOAP_M_URI,null,'0','1','false'};
-        private String[] label_type_info = new String[]{'label',SOAP_M_URI,null,'0','1','false'};
-        private String[] layoutColumns_type_info = new String[]{'layoutColumns',SOAP_M_URI,null,'0','-1','false'};
-        private String[] style_type_info = new String[]{'style',SOAP_M_URI,null,'1','1','false'};
+        public String name;
+        private String[] label_type_info = new String[]{'label',SOAP_M_URI,null,'1','1','false'};
+        private String[] name_type_info = new String[]{'name',SOAP_M_URI,null,'1','1','false'};
         private String[] apex_schema_type_info = new String[]{SOAP_M_URI,'true','false'};
-        private String[] field_order_type_info = new String[]{'customLabel','detailHeading','editHeading','label','layoutColumns','style'};
+        private String[] field_order_type_info = new String[]{'label','name'};
     }
 
-    public class LayoutColumn {
-        public SalesforceMetadataService.LayoutItem[] layoutItems;
-        public String reserved;
-        private String[] layoutItems_type_info = new String[]{'layoutItems',SOAP_M_URI,null,'0','-1','false'};
-        private String[] reserved_type_info = new String[]{'reserved',SOAP_M_URI,null,'0','1','false'};
+    public class CustomApplicationTranslation {
+        public String label;
+        public String name;
+        private String[] label_type_info = new String[]{'label',SOAP_M_URI,null,'1','1','false'};
+        private String[] name_type_info = new String[]{'name',SOAP_M_URI,null,'1','1','false'};
         private String[] apex_schema_type_info = new String[]{SOAP_M_URI,'true','false'};
-        private String[] field_order_type_info = new String[]{'layoutItems','reserved'};
+        private String[] field_order_type_info = new String[]{'label','name'};
     }
 
-    public class LayoutItem {
-        public SalesforceMetadataService.AnalyticsCloudComponentLayoutItem analyticsCloudComponent;
-        public String behavior;
-        public String canvas;
-        public String component;
-        public String customLink;
-        public Boolean emptySpace;
-        public String field;
-        public Integer height;
-        public String page_x;
-        public SalesforceMetadataService.ReportChartComponentLayoutItem reportChartComponent;
-        public String scontrol;
-        public Boolean showLabel;
-        public Boolean showScrollbars;
-        public String width;
-        private String[] analyticsCloudComponent_type_info = new String[]{'analyticsCloudComponent',SOAP_M_URI,null,'0','1','false'};
-        private String[] behavior_type_info = new String[]{'behavior',SOAP_M_URI,null,'0','1','false'};
-        private String[] canvas_type_info = new String[]{'canvas',SOAP_M_URI,null,'0','1','false'};
-        private String[] component_type_info = new String[]{'component',SOAP_M_URI,null,'0','1','false'};
-        private String[] customLink_type_info = new String[]{'customLink',SOAP_M_URI,null,'0','1','false'};
-        private String[] emptySpace_type_info = new String[]{'emptySpace',SOAP_M_URI,null,'0','1','false'};
-        private String[] field_type_info = new String[]{'field',SOAP_M_URI,null,'0','1','false'};
-        private String[] height_type_info = new String[]{'height',SOAP_M_URI,null,'0','1','false'};
-        private String[] page_x_type_info = new String[]{'page',SOAP_M_URI,null,'0','1','false'};
-        private String[] reportChartComponent_type_info = new String[]{'reportChartComponent',SOAP_M_URI,null,'0','1','false'};
-        private String[] scontrol_type_info = new String[]{'scontrol',SOAP_M_URI,null,'0','1','false'};
-        private String[] showLabel_type_info = new String[]{'showLabel',SOAP_M_URI,null,'0','1','false'};
-        private String[] showScrollbars_type_info = new String[]{'showScrollbars',SOAP_M_URI,null,'0','1','false'};
-        private String[] width_type_info = new String[]{'width',SOAP_M_URI,null,'0','1','false'};
+    public class readTranslationsResponse_element implements IReadResponseElement {
+        public SalesforceMetadataService.ReadTranslationsResult result;
+        public IReadResult getResult() { return result; }
+        private String[] result_type_info = new String[]{'result',SOAP_M_URI,null,'1','1','false'};
         private String[] apex_schema_type_info = new String[]{SOAP_M_URI,'true','false'};
-        private String[] field_order_type_info = new String[]{'analyticsCloudComponent','behavior','canvas','component','customLink','emptySpace','field','height','page_x','reportChartComponent','scontrol','showLabel','showScrollbars','width'};
+        private String[] field_order_type_info = new String[]{'result'};
     }
 
-    public class ReportChartComponentLayoutItem {
-        public Boolean cacheData;
-        public String contextFilterableField;
-        public String error;
-        public Boolean hideOnError;
-        public Boolean includeContext;
-        public String reportName;
-        public Boolean showTitle;
-        public String size;
-        private String[] cacheData_type_info = new String[]{'cacheData',SOAP_M_URI,null,'0','1','false'};
-        private String[] contextFilterableField_type_info = new String[]{'contextFilterableField',SOAP_M_URI,null,'0','1','false'};
-        private String[] error_type_info = new String[]{'error',SOAP_M_URI,null,'0','1','false'};
-        private String[] hideOnError_type_info = new String[]{'hideOnError',SOAP_M_URI,null,'0','1','false'};
-        private String[] includeContext_type_info = new String[]{'includeContext',SOAP_M_URI,null,'0','1','false'};
-        private String[] reportName_type_info = new String[]{'reportName',SOAP_M_URI,null,'1','1','false'};
-        private String[] showTitle_type_info = new String[]{'showTitle',SOAP_M_URI,null,'0','1','false'};
-        private String[] size_type_info = new String[]{'size',SOAP_M_URI,null,'0','1','false'};
+    public class ReadTranslationsResult implements IReadResult {
+        public SalesforceMetadataService.Translations[] records;
+        public SalesforceMetadataService.Metadata[] getRecords() { return records; }
+        private String[] records_type_info = new String[]{'records',SOAP_M_URI,null,'0','-1','false'};
         private String[] apex_schema_type_info = new String[]{SOAP_M_URI,'true','false'};
-        private String[] field_order_type_info = new String[]{'cacheData','contextFilterableField','error','hideOnError','includeContext','reportName','showTitle','size'};
-    }
-
-    public class AnalyticsCloudComponentLayoutItem {
-        public String assetType;
-        public String devName;
-        public String error;
-        public String filter;
-        public Integer height;
-        public Boolean hideOnError;
-        public Boolean showHeader;
-        public Boolean showSharing;
-        public Boolean showTitle;
-        public String width;
-        private String[] assetType_type_info = new String[]{'assetType',SOAP_M_URI,null,'1','1','false'};
-        private String[] devName_type_info = new String[]{'devName',SOAP_M_URI,null,'1','1','false'};
-        private String[] error_type_info = new String[]{'error',SOAP_M_URI,null,'0','1','false'};
-        private String[] filter_type_info = new String[]{'filter',SOAP_M_URI,null,'0','1','false'};
-        private String[] height_type_info = new String[]{'height',SOAP_M_URI,null,'0','1','false'};
-        private String[] hideOnError_type_info = new String[]{'hideOnError',SOAP_M_URI,null,'0','1','false'};
-        private String[] showHeader_type_info = new String[]{'showHeader',SOAP_M_URI,null,'0','1','false'};
-        private String[] showSharing_type_info = new String[]{'showSharing',SOAP_M_URI,null,'0','1','false'};
-        private String[] showTitle_type_info = new String[]{'showTitle',SOAP_M_URI,null,'0','1','false'};
-        private String[] width_type_info = new String[]{'width',SOAP_M_URI,null,'0','1','false'};
-        private String[] apex_schema_type_info = new String[]{SOAP_M_URI,'true','false'};
-        private String[] field_order_type_info = new String[]{'assetType','devName','error','filter','height','hideOnError','showHeader','showSharing','showTitle','width'};
+        private String[] field_order_type_info = new String[]{'records'};
     }
 
     public class MetadataPort {

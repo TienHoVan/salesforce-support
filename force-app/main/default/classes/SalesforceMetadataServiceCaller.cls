@@ -31,4 +31,35 @@ public class SalesforceMetadataServiceCaller {
             }
         return masterLabelAndTranslationMap;
     }
+
+    public static Map<String, String> fetchCustomLabelTranslation(List<String> labelNames, String languageKey) {
+        Map<String, String> labelNameAndTranslationMap = new Map<String, String>();
+        SalesforceMetadataService.MetadataPort service = new SalesforceMetadataService.MetadataPort();
+        service.SessionHeader = new SalesforceMetadataService.SessionHeader_element();
+        service.SessionHeader.sessionId = UserInfo.getSessionId();
+
+        String translationFullName = languageKey;
+
+        SalesforceMetadataService.IReadResult readResult = service.readMetadata(
+            'Translations',
+            new String[] { translationFullName }
+        );
+
+        if (readResult != null
+            && readResult.getRecords() != null
+            && !readResult.getRecords().isEmpty()) {
+
+                SalesforceMetadataService.Translations translation =
+                    (SalesforceMetadataService.Translations) readResult.getRecords()[0];
+                if (translation.customLabels != null) {
+                    for (SalesforceMetadataService.CustomLabelTranslation labelTranslation : translation.customLabels) {
+                        if (labelNames.contains(labelTranslation.name)) {
+                            labelNameAndTranslationMap.put(labelTranslation.name, labelTranslation.label);
+                        }
+                    }
+                }
+            }
+
+        return labelNameAndTranslationMap;
+    }
 }
